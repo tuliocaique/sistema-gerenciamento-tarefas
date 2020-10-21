@@ -1,0 +1,83 @@
+/* -----------------------------------------------------------------------------
+
+Sistema de Tarefas
+
+Arquivo:            Base CSS File
+Versão:             1.0
+Ultima Alteração:   21/10/2020
+Autor:              Túlio Caique Faria Cota
+
+Index de conteudo:
+
+1. Setup
+2. Elementos
+-- 2.1 Backgrounds e Colors
+-- 2.2 Botões
+-- 2.3 Navegação
+-- 2.4 Cards
+-- 2.5 Formularios
+
+----------------------------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------------------------- */
+/* --- 1. SETUP
+/* ----------------------------------------------------------------------------- */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --primary: #222fb9;
+    --secondary: #ffe600;
+    --success: #21b731;
+    --info: #2781d5;
+    --warning: #ff7a01;
+    --danger: #ff2625;
+    --light: #f4f4f4;
+    --dark: #6e6e6e;
+}
+html,body {
+    width:100%;
+    height:100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fbfbfb;
+}
+
+
+/* ----------------------------------------------------------------------------- */
+/* --- 2. ELEMENTOS
+/* ----------------------------------------------------------------------------- */
+/* ---- 2.1 Backgrounds e Colors */
+.bg-primary-blue {
+    background-color: var(--primary);
+}
+.bg-secondary-yellow {
+    background-color: var(--secondary);
+}
+.color-primary-blue {
+    color: var(--primary);
+}
+
+/* ---- 2.2 Botões */
+.btn-rounded {
+    border-radius: 30px !important;
+}
+
+/* ---- 2.3 Navegação */
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: var(--primary);
+}
+.nav-pill-rounded {
+    border-radius: 30px !important;
+}
+/* ---- 2.4 Cards */
+
+/* ---- 2.5 Formularios */
+.login-form {
+    padding: 50px 50px;
+}
+
