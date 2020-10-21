@@ -34,7 +34,7 @@ async function getTarefas(token){
                         '                            <h4 class="font-weight-bold">'+valor.titulo+'</h4>\n' +
                         '                            <p>'+valor.descricao+'</p>\n' +
                         '                            <p class="text-muted text-uppercase">'+statusTarefa+' Inicio: '+valor.dataInicio+' | Fim: '+valor.dataFim+'</p>\n' +
-                        '                            <button class="btn btn-sm btn-primary btn-rounded pl-3 pr-3" data-toggle="model" data-target="#modalAlterarTarefa" data-cod="'+valor.cod+'" onclick="gerenciarTarefa(this.getAttribute(\'data-cod\'), \'editar\')"><i class="fas fa-edit"></i> Editar</button>\n' +
+                        '                            <button class="btn btn-sm btn-primary btn-rounded pl-3 pr-3" data-toggle="modal" data-target="#modalAlterarTarefa" data-cod="'+valor.cod+'" onclick="gerenciarTarefa(this.getAttribute(\'data-cod\'), \'editar\')"><i class="fas fa-edit"></i> Editar</button>\n' +
                         '                            <button class="btn btn-sm btn-danger btn-rounded pl-3 pr-3" data-cod="'+valor.cod+'" onclick="gerenciarTarefa(this.getAttribute(\'data-cod\'), \'apagar\')"><i class="fas fa-trash"></i> Apagar</button>\n' +
                         '                        </li>');
                 });
@@ -127,7 +127,6 @@ async function cadastrarTarefa(token){
             }
         },
         error:function (result) {
-            console.error(result);
             toastr.error(result);
         },
         complete:function () {
