@@ -2042,7 +2042,7 @@
 
   var NAME$5 = 'modal';
   var VERSION$5 = '4.5.3';
-  var DATA_KEY$5 = 'bs.model';
+  var DATA_KEY$5 = 'bs.modal';
   var EVENT_KEY$5 = "." + DATA_KEY$5;
   var DATA_API_KEY$5 = '.data-api';
   var JQUERY_NO_CONFLICT$5 = $__default['default'].fn[NAME$5];
@@ -2072,17 +2072,17 @@
   var EVENT_MOUSEUP_DISMISS = "mouseup.dismiss" + EVENT_KEY$5;
   var EVENT_MOUSEDOWN_DISMISS = "mousedown.dismiss" + EVENT_KEY$5;
   var EVENT_CLICK_DATA_API$5 = "click" + EVENT_KEY$5 + DATA_API_KEY$5;
-  var CLASS_NAME_SCROLLABLE = 'model-dialog-scrollable';
-  var CLASS_NAME_SCROLLBAR_MEASURER = 'model-scrollbar-measure';
-  var CLASS_NAME_BACKDROP = 'model-backdrop';
-  var CLASS_NAME_OPEN = 'model-open';
+  var CLASS_NAME_SCROLLABLE = 'modal-dialog-scrollable';
+  var CLASS_NAME_SCROLLBAR_MEASURER = 'modal-scrollbar-measure';
+  var CLASS_NAME_BACKDROP = 'modal-backdrop';
+  var CLASS_NAME_OPEN = 'modal-open';
   var CLASS_NAME_FADE$1 = 'fade';
   var CLASS_NAME_SHOW$3 = 'show';
-  var CLASS_NAME_STATIC = 'model-static';
-  var SELECTOR_DIALOG = '.model-dialog';
-  var SELECTOR_MODAL_BODY = '.model-body';
-  var SELECTOR_DATA_TOGGLE$3 = '[data-toggle="model"]';
-  var SELECTOR_DATA_DISMISS = '[data-dismiss="model"]';
+  var CLASS_NAME_STATIC = 'modal-static';
+  var SELECTOR_DIALOG = '.modal-dialog';
+  var SELECTOR_MODAL_BODY = '.modal-body';
+  var SELECTOR_DATA_TOGGLE$3 = '[data-toggle="modal"]';
+  var SELECTOR_DATA_DISMISS = '[data-dismiss="modal"]';
   var SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top';
   var SELECTOR_STICKY_CONTENT = '.sticky-top';
   /**
@@ -2282,7 +2282,7 @@
       var modalBody = this._dialog ? this._dialog.querySelector(SELECTOR_MODAL_BODY) : null;
 
       if (!this._element.parentNode || this._element.parentNode.nodeType !== Node.ELEMENT_NODE) {
-        // Don't move model's DOM position
+        // Don't move modal's DOM position
         document.body.appendChild(this._element);
       }
 
@@ -2290,7 +2290,7 @@
 
       this._element.removeAttribute('aria-hidden');
 
-      this._element.setAttribute('aria-model', true);
+      this._element.setAttribute('aria-modal', true);
 
       this._element.setAttribute('role', 'dialog');
 
@@ -2379,7 +2379,7 @@
 
       this._element.setAttribute('aria-hidden', true);
 
-      this._element.removeAttribute('aria-model');
+      this._element.removeAttribute('aria-modal');
 
       this._element.removeAttribute('role');
 
@@ -2470,7 +2470,7 @@
       }
     } // ----------------------------------------------------------------------
     // the following methods are used to handle overflowing modals
-    // todo (fat): these should probably be refactored out of model.js
+    // todo (fat): these should probably be refactored out of modal.js
     // ----------------------------------------------------------------------
     ;
 
@@ -2622,7 +2622,7 @@
 
     var $target = $__default['default'](target).one(EVENT_SHOW$2, function (showEvent) {
       if (showEvent.isDefaultPrevented()) {
-        // Only register focus restorer if model will actually get shown
+        // Only register focus restorer if modal will actually get shown
         return;
       }
 
@@ -2927,7 +2927,7 @@
       clearTimeout(this._timeout);
       $__default['default'].removeData(this.element, this.constructor.DATA_KEY);
       $__default['default'](this.element).off(this.constructor.EVENT_KEY);
-      $__default['default'](this.element).closest('.model').off('hide.bs.model', this._hideModalHandler);
+      $__default['default'](this.element).closest('.modal').off('hide.bs.modal', this._hideModalHandler);
 
       if (this.tip) {
         $__default['default'](this.tip).remove();
@@ -3227,7 +3227,7 @@
         }
       };
 
-      $__default['default'](this.element).closest('.model').on('hide.bs.model', this._hideModalHandler);
+      $__default['default'](this.element).closest('.modal').on('hide.bs.modal', this._hideModalHandler);
 
       if (this.config.selector) {
         this.config = _extends({}, this.config, {
