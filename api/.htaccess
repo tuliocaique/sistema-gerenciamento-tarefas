@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{HTTP:Authorization} ^(.*)
+    RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+
+    #ROTAS DA API
+    RewriteRule ^usuario?$ UsuarioAPI.php [NC,L] # exemplo.com.br/api/usuario
+    RewriteRule ^tarefa?$ TarefaAPI.php [NC,L] # exemplo.com.br/api/tarefa
+    RewriteRule ^login?$ LoginAPI.php [NC,L] # exemplo.com.br/api/login
+    RewriteRule ^token?$ JwtAPI.php [NC,L] # exemplo.com.br/api/token
+</IfModule>
+
