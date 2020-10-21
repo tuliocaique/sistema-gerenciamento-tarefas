@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{HTTP:Authorization} ^(.*)
+    RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+
+    DirectoryIndex view/ViewIndex.php
+
+    RewriteRule ^home?$ view/ViewIndex.php [NC,L] # exemplo.com.br/home
+    RewriteRule ^login?$ view/ViewLogin.php [NC,L] # exemplo.com.br/login
+    RewriteRule ^cadastrar?$ view/ViewCadastrarUsuario.php [NC,L] # exemplo.com.br/cadastrar
+</IfModule>
+
