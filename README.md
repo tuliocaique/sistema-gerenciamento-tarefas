@@ -2,6 +2,9 @@
 
 Este é um sistema de gerenciamento de tarefas cadastradas pelo usuário. O código foi desenvolvido em PHP e outras tecnologias citadas abaixo.
 
+![Preview 1](https://i.ibb.co/GV6qBNq/IMG1.png)
+
+![Preview 2](https://i.ibb.co/y4w6hYg/IMG2.png)
 
 ## Tecnologias
 * PHP 7.4.1
